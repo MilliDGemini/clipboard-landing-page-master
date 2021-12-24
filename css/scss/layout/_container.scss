@@ -1,0 +1,15 @@
+.main {
+  & > * {
+    margin-bottom: 15rem;
+  }
+}
+
+.container {
+  width: 85%;
+  max-width: 80rem;
+  margin: 0 auto;
+
+  @media (min-width: 1140px) {
+    all: revert;
+  }
+}

@@ -1,0 +1,95 @@
+@use '../abstracts/index.scss' as *;
+
+.workflow {
+  margin-bottom: 11rem;
+
+  &__description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__details {
+    margin: 5rem 0;
+
+    @media (min-width: 1140px) {
+      margin: 0 0 5rem 0;
+      padding: 0 15rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 3rem;
+    }
+  }
+
+  &__detail {
+    @include d-flex;
+
+    gap: 1rem;
+
+    @media (min-width: 1140px) {
+      margin: 2rem 0 3rem 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    @media (min-width: 810px) {
+      max-width: 35rem;
+    }
+  }
+
+  &__partners {
+    overflow: hidden;
+
+    @media (min-width: 1140px) {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    &-list {
+      @include d-flex;
+
+      @media (min-width: 810px) {
+        width: calc(21rem * 10);
+        justify-content: space-around;
+        flex-direction: row;
+        gap: 5rem;
+        animation: slide 30s linear infinite alternate;
+        padding: 0 15rem;
+      }
+    }
+
+    &-item {
+      margin-bottom: 5.5rem;
+
+      @media (min-width: 810px) {
+        width: 20rem;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      &--is-hidden {
+        display: none;
+
+        @media (min-width: 810px) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-15rem * 5));
+  }
+}
